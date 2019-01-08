@@ -36,6 +36,10 @@ class about extends React.Component {
         const {
             TodoList: {todos}
         } = this.props;
+        const grid = {
+            gutter: 16,
+            column: 4
+        }
         return (
             <div>
                 <p> 这是about页 </p> 
@@ -47,7 +51,7 @@ class about extends React.Component {
                     onSearch = {this.submit}/>
                 {
                     <List
-                        grid={{ gutter: 16, column: 4 }}
+                        grid={grid}
                         dataSource = {
                             todos
                         }
