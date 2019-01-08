@@ -25,6 +25,14 @@ class ezrList extends React.Component {
 
     }
     render(){
+        const red = {
+            color: 'red'
+        }
+        const iStyle = {
+            color: '#ccc',
+            fontSize: '12px',
+            paddingLeft: '10px'
+        }
         return(
             <List
                 itemLayout="horizontal"
@@ -38,12 +46,12 @@ class ezrList extends React.Component {
                             <Popconfirm 
                                 title="是否确定删除？" 
                                 onConfirm={this.confirm.bind(this, index,'del')}
-                                icon={<Icon type="question-circle-o" style={{ color: 'red' }} />}>
+                                icon={<Icon type="question-circle-o" style={red} />}>
                                 <Button type="danger">删除</Button>
                             </Popconfirm>]}>
                         <div>
                             <span>{item.name}</span>
-                            <i style={{color: '#ccc', fontSize: '12px', paddingLeft: '10px'}}>
+                            <i style={iStyle}>
                                 {item.description?item.description:'没有描述'}
                             </i>
                         </div>
